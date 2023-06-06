@@ -1,0 +1,84 @@
+Server
+-------
+
+1- npm init
+2- npm i express
+3- index.js file creation
+
+    1- import express
+    2- server creation using express    (like app creation)
+    3- set port to runs server
+    
+
+[to install nodemon - npm i -g nodemon
+
+nodemon index.js(npx should add before this comment if in terminal showing errors.)
+
+(nodemon will automatically recombile)]
+
+nodemon
+    server used instead of node for automatic recomilation.
+
+when opening compass
+give Database name
+then give collection name-it should be plural.
+
+
+
+MongoDB
+
+features of mongodb
+difference between sql and mongodb
+
+
+
+basic shell commands in mongodb
+--------------------------------
+(to support these commands we have to install mongoshell,we have to type the below commands in mongoshell)
+
+* to list databases
+        -> show dbs
+
+* to open a databases
+        -> use databaseName
+
+* to list the collections inside a database
+        -> show collections
+
+* to list the datas inside a collection
+        -> databaseName.collectionName.find()       *** (this is very important)
+
+* to access any single data from collection
+        -> databaseName.collectionName.findone({Key:value})      ***
+        eg: bServer.users.findOne({acno:1000})  object/null
+
+* to delete any single data from collection
+        ->  databaseName.collectionName.deleteOne({key:value})     ***
+
+* to access datas according to a condition
+        ->databaseName.collectionName.find({key:{condition}})           (in this command the condition should be given in query selection operator.)(all this information will be there in the documentation of mongodb)
+        ->bServer.users.find({balance:{$gt:4000}})
+
+* to add new data to collection         ->insertOne({data})
+* update datas                          ->updateOne({data to update})
+
+
+server MongoDb integration
+---------------------------
+
+mongoose - library used to intergrate mongodb with node Server
+connect() - method  ''
+
+command to install mongoose - npm i mongoose
+
+
+json() - a method in express used to convert all incoming json datas into js.
+
+
+front-End Server integration(connectin gtotal front end framework)
+-----------------------------
+
+cors - cross origin resourse sharing
+
+[npm i cors - to install cors]
+[next is to import that cors]
